@@ -98,7 +98,6 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.1/ref/settings/#databases
 
-print("DB_NAME:", os.getenv("DB_NAME"))
 
 DATABASES = {
     'default': {

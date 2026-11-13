@@ -5,6 +5,23 @@
 .env.*
 !.env.example
 
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
 # =========================
 # Node / React frontend
 # =========================
