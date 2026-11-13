@@ -1,0 +1,10 @@
+query GetExpenses {
+  expenses {
+    id
+    merchant
+    amountMinor
+    currency
+    description
+    expenseDate
+  }
+}

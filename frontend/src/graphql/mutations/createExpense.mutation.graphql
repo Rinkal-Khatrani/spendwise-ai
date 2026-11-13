@@ -1,0 +1,23 @@
+mutation CreateExpense(
+  $merchant: String!
+  $amountMinor: Int!
+  $currency: String
+  $description: String
+  $expenseDate: Date!
+) {
+  createExpense(
+    merchant: $merchant
+    amountMinor: $amountMinor
+    currency: $currency
+    description: $description
+    expenseDate: $expenseDate
+  ) {
+    expense {
+      id
+      merchant
+      amountMinor
+      currency
+      expenseDate
+    }
+  }
+}
