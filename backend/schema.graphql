@@ -1,0 +1,50 @@
+type Query {
+  expenses: [ExpenseType]
+  hello: String
+}
+
+type ExpenseType {
+  id: ID!
+  merchant: String!
+
+  """"""
+  amountMinor: BigInt!
+  currency: String!
+  description: String!
+  expenseDate: Date!
+  createdAt: DateTime!
+}
+
+"""
+The `BigInt` scalar type represents non-fractional whole numeric values.
+`BigInt` is not constrained to 32-bit like the `Int` type and thus is a less
+compatible type.
+"""
+scalar BigInt
+
+"""
+The `Date` scalar type represents a Date
+value as specified by
+[iso8601](https://en.wikipedia.org/wiki/ISO_8601).
+"""
+scalar Date
+
+"""
+The `DateTime` scalar type represents a DateTime
+value as specified by
+[iso8601](https://en.wikipedia.org/wiki/ISO_8601).
+"""
+scalar DateTime
+
+type Mutation {
+  createExpense(amountMinor: Int!, currency: String = "INR", description: String, expenseDate: Date!, merchant: String!): CreateExpense
+  welcome: WelcomeMutation
+}
+
+type CreateExpense {
+  expense: ExpenseType
+}
+
+type WelcomeMutation {
+  message: String
+}
